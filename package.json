@@ -1,0 +1,109 @@
+{
+  "name": "appium",
+  "description": "Automation for Apps.",
+  "tags": [
+    "automation",
+    "javascript",
+    "selenium",
+    "webdriver",
+    "ios",
+    "android",
+    "firefoxos",
+    "testing"
+  ],
+  "version": "1.7.2",
+  "author": "https://github.com/appium",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/appium.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appium/appium/issues"
+  },
+  "engines": {
+    "node": ">=5",
+    "npm": ">=3"
+  },
+  "main": "./build/lib/main.js",
+  "bin": {
+    "appium": "./build/lib/main.js"
+  },
+  "directories": {
+    "lib": "./lib",
+    "doc": "./docs"
+  },
+  "dependencies": {
+    "appium-android-driver": "git://github.com/SethWen/appium_android_driver.git",
+    "appium-base-driver": "2.x",
+    "appium-espresso-driver": "^1.0.0-beta.3",
+    "appium-fake-driver": "^0.2.x",
+    "appium-ios-driver": "1.x",
+    "appium-mac-driver": "1.x",
+    "appium-selendroid-driver": "1.x",
+    "appium-support": "2.x",
+    "appium-uiautomator2-driver": "git://github.com/SethWen/appium_uiautomator2_driver.git",
+    "appium-windows-driver": "1.x",
+    "appium-xcuitest-driver": "2.x",
+    "appium-youiengine-driver": "1.x",
+    "argparse": "1.x",
+    "async-lock": "^1.0.0",
+    "asyncbox": "2.x",
+    "babel-runtime": "=5.8.24",
+    "bluebird": "2.x",
+    "continuation-local-storage": "3.x",
+    "dateformat": "^2.0.0",
+    "fkill": "^5.2.0",
+    "lodash": "4.x",
+    "npmlog": "2.x",
+    "request": "^2.81.0",
+    "request-promise": "1.x",
+    "source-map-support": "0.x",
+    "teen_process": "1.x",
+    "winston": "2.x"
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp once",
+    "e2e-test": "gulp e2e-test",
+    "watch": "gulp watch",
+    "build": "gulp transpile",
+    "mocha": "mocha",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "precommit-test": "REPORTER=dot gulp once",
+    "lint": "gulp eslint",
+    "coverage": "gulp coveralls",
+    "generate-docs": "babel-node ./commands-yml/parse.js"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "precommit-test"
+  ],
+  "devDependencies": {
+    "appium-gulp-plugins": "2.x",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "7.x",
+    "babel-preset-env": "^1.6.0",
+    "chai": "3.x",
+    "chai-as-promised": "5.x",
+    "eslint": "3.x",
+    "eslint-config-appium": "2.x",
+    "eslint-plugin-babel": "3.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-mocha": "4.x",
+    "eslint-plugin-promise": "3.x",
+    "gulp": "3.x",
+    "handlebars": "^4.0.10",
+    "mocha": "2.x",
+    "pre-commit": "1.x",
+    "replace-ext": "^1.0.0",
+    "sinon": "1.x",
+    "validate.js": "^0.11.1",
+    "wd": "1.x",
+    "yaml-js": "^0.2.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "1.x",
+    "heapdump": "0.x"
+  }
+}
