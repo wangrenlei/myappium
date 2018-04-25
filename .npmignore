@@ -1,16 +1,1 @@
-assets/
-submodules/
-test/
-_vimrc_local.vim
-*.swp
-*.swo
-*~
-.*~
-.DS_Store
-.travis.yml
-*.log
-*.trace
-*.sublime-
-*.prefs
-./.npmignore
-coverage
+
